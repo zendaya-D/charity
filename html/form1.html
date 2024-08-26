@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="/css/form1.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="donation-info">
+            <img src="/images/twitter-image02.jpg" alt="Feed Displaced Kids in Gaza">
+            <div class="boxx">
+                <span><img src="/images/logo3orgs.png" alt=""></span>
+                <h2>Help Us To Feed Displaced Kids In Gaza</h2>
+                <p>Thousands of Palestinian children lack basic needs such as food and clean water. Displaced families have nothing they can do but <strong>wait</strong> for precious aid that's already being restricted in how much passes through to refugee camps.</p>
+                <p>Even $5 can help to feed a hungry child. Please give generously.</p>
+            </div>        
+        </div>
+        <div class="donation-form">
+            <form action="payment.html" method="GET" id="donationForm-1">
+                <div class="modal-header">
+                    <span class="back-arrow"><a href="intro.html">←</a></span>
+                    <h2>Credentials Form</h2>
+                </div>
+                <h3>Enter your details</h3>
+                
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                <br>
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name">
+                
+                <p></p>
+
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+                <br>    
+                <input type="tel" id="phone" name="phone" placeholder="Phone number (optional)">
+                
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" name="organization" id="dedicate-checkbox"> Donate as an organization
+                        <input placeholder="Organization Name" id="org-name" name="dedicate">
+                    </label>
+                    <label>
+                        <input type="checkbox" name="anonymous" id="dedicate-checkbox"> Donate anonymously
+                    </label>
+                </div>
+                <button type="submit" id="final">Continue</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Get the checkbox and the input field elements
+    const dedicateCheckbox = document.getElementById('dedicate-checkbox');
+    const dedicateInput = document.getElementById('org-name');
+
+    // Add an event listener to detect when the checkbox is checked or unchecked
+    dedicateCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            dedicateInput.style.display = 'inline'; // Show the input field when checked
+        } else {
+            dedicateInput.style.display = 'none'; // Hide the input field when unchecked
+        }
+    });
+</script>
+</html>

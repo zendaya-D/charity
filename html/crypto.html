@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Payment</title>
+    <link rel="stylesheet" href="/css/crypto.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-header">
+            <span class="back-arrow"><a href="payment.html">←</a></span>
+            <h2>Crypto Payment</h2>
+        </div>
+        <p>Please provide your card details to continue with your donation. This card will be charged.</p>
+
+        <div class="collection">
+            <div class="coin">
+                <div><img src="/images/bitcoin.jpg" alt="btc-QRcode" srcset=""></div>
+                <div class="address">
+                    <h2>Send your Bitcoin BTC:</h2>
+                    <p id="btc-address">bc1q6fkcnwf3xnsft6la5eepqzzjr9sgmys7jyn3he</p>
+                    <button class="copy-btn" data-address="btc-address">Copy Address</button>
+                </div>
+            </div>
+            <div class="coin">
+                <div><img src="/images/eth.jpg" alt="eth-QRcode" srcset=""></div>
+                <div class="address">
+                    <h2>Send your Etherum ETH:</h2>
+                    <p id="eth-address">0x0fa5B6c0d9b8C4f6eC689E16Cb69B23e42C0f7b0</p>
+                    <button class="copy-btn" data-address="eth-address">Copy Address</button>
+                </div>
+            </div>
+            <div class="coin">
+                <div><img src="/images/usdt.jpg" alt="usdt-QRcode" srcset=""></div>
+                <div class="address">
+                    <h2>Send your Tether USDT ERC20:</h2>
+                    <p id="usdt-address">0x0fa5B6c0d9b8C4f6eC689E16Cb69B23e42C0f7b0</p>
+                    <button class="copy-btn" data-address="usdt-address">Copy Address</button>
+                </div>
+            </div>
+            <div id="copy-message" style="display:none; color: green;">Address copied to clipboard!</div>            
+        </div>
+        
+    </div>
+    
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Get the address ID from the data-address attribute
+                const addressId = this.getAttribute('data-address');
+                const addressText = document.getElementById(addressId).textContent;
+
+                // Copy the text to the clipboard
+                navigator.clipboard.writeText(addressText).then(() => {
+                    // Show flash message
+                    const copyMessage = document.getElementById('copy-message');
+                    copyMessage.style.display = 'block';
+                    copyMessage.textContent = 'Address copied to clipboard!';
+                    
+                    // Hide the message after 2 seconds
+                    setTimeout(() => {
+                        copyMessage.style.display = 'none';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy address: ', err);
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="/css/intro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="donation-info">
+            <img src="/images/twitter-image02.jpg" alt="Help Us Feed Displaced Kids In Gaza">
+            <div class="boxx">
+                <span><img src="/images/logo3orgs.png" alt=""></span>
+                <h2>Help Us To Feed Displaced Kids In Gaza</h2>
+                <p>Thousands of Palestinian children lack basic needs such as food and clean water. Displaced families have nothing they can do but <strong>wait</strong> for precious aid that's already being restricted in how much passes through to refugee camps.</p>
+                <p>Even $5 can help to feed a hungry child. Please give generously.</p>
+            </div>
+        </div>
+        <div class="donation-form">
+            <form action="form1.html" id="donationForm">
+                <h3><span><img src="/images/icons8-security-shield-32.png" alt=""></span>Secure donation</h3>
+                <label for="donationAmount">Donation Amount:</label>
+                <select id="donationAmount" onchange="checkCustomAmount()">
+                    <option value="100">$100 - Enough to feed 10 children for a day.</option>
+                    <option value="300">$300 - Enough to feed 30 children for a day.</option>
+                    <option value="600">$600 - Enough to feed 50 children for a day.</option>
+                    <option value="custom">Other amount</option>
+                    <input type="number" id="customAmount" placeholder="Enter your amount" style="display:none;" />
+                    
+                </select>
+                <label>
+                    <input type="checkbox" id="dedicate-checkbox" name="dedicate"> Dedicate this donation
+                    <br><input placeholder="Hounrable Name" id="dedicate" name="dedicate">
+                </label>
+                <!-- <label>
+                    <input type="checkbox" name="dedicate" id="dedicateName"> Dedicate this donation
+                    <br><input placeholder="Hounrable Name" id="dedicate" name="dedicate">
+                </label> -->
+                <div class="dropdown-container">
+                    <label for="designate">Designate to:</label>
+                    
+                        <select id="designate" name="designate">
+                            <option value="most">where needed most</option>
+                            <option value="gaza">Gaza</option>
+                            <option value="zakat">Zakat</option>
+                        </select>
+                    
+                </div>
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function checkCustomAmount() {
+            var selectBox = document.getElementById("donationAmount");
+            var customAmountInput = document.getElementById("customAmount");
+            
+            if (selectBox.value === "custom") {
+                customAmountInput.style.display = "block";
+            } else {
+                customAmountInput.style.display = "none";
+            }
+
+        }
+    </script>
+   
+   <script>
+        // Get the checkbox and the input field elements
+        const dedicateCheckbox = document.getElementById('dedicate-checkbox');
+        const dedicateInput = document.getElementById('dedicate');
+
+        // Add an event listener to detect when the checkbox is checked or unchecked
+        dedicateCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                dedicateInput.style.display = 'block'; // Show the input field when checked
+            } else {
+                dedicateInput.style.display = 'none'; // Hide the input field when unchecked
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("donationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Redirect to the next page
+            window.location.href = "form1.html";
+        });
+    </script>
+</body>
+</html>

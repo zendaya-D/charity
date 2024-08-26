@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="/css/payment.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="donation-info">
+            <img src="/images/twitter-image02.jpg" alt="Feed Displaced Kids in Gaza">
+            <div class="boxx">
+                <span><img src="/images/logo3orgs.png" alt=""></span>
+                <h2>Help Us To Feed Displaced Kids In Gaza</h2>
+                <p>Thousands of Palestinian children lack basic needs such as food and clean water. Displaced families have nothing they can do but <strong>wait</strong> for precious aid that's already being restricted in how much passes through to refugee camps.</p>
+                <p>Even $5 can help to feed a hungry child. Please give generously.</p>
+            </div>        
+        </div>
+        <div class="donation-form">
+            <div class="payment-container">
+                <div class="header">
+                    <a href="second_page.html" class="back-btn back-arrow">←</a>
+                    <span>You donate</span>
+                </div>
+            
+                <div class="amount">
+                    <span>$300</span> <span class="currency">USD</span>
+                </div>
+            
+                <!-- <div class="cover-cost">
+                    <label>
+                        <input type="checkbox" checked />
+                        <span class="checkbox-text">Cover transaction costs</span>
+                        <span class="info-icon">?</span>
+                    </label>
+                </div> -->
+            
+                <div class="payment-options">
+                    <a href="cc.html"><button class="payment-btn credit-card">Credit card</button></a>
+                    <a href="crypto.html"><button class="payment-btn paypal">BTC, Usdt, Eth</button></a>
+                    <!-- <a href="cc.html"><button class="payment-btn google-pay">Wallet Connect</button></a> -->
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+<script>
+    // Get the checkbox and the input field elements
+    const dedicateCheckbox = document.getElementById('dedicate-checkbox');
+    const dedicateInput = document.getElementById('org-name');
+
+    // Add an event listener to detect when the checkbox is checked or unchecked
+    dedicateCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            dedicateInput.style.display = 'inline'; // Show the input field when checked
+        } else {
+            dedicateInput.style.display = 'none'; // Hide the input field when unchecked
+        }
+    });
+</script>
+</html>

@@ -301,7 +301,7 @@ body {
 }
 
 .donateBox iframe {
-	display: block;
+	display: hidden;
 	width: 100% !important;
 }
 

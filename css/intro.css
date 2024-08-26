@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/intro-bg.jpg);    
+    background-size: cover; /* Make sure the background image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust the opacity here */
+    z-index: -1; /* Place the background behind other content */
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: auto;
+}
+
+.donation-info {
+    background-color: #fff;
+    margin: 0px auto;
+    max-width: 80%;
+    width: 500px;
+    border-radius: 10px 10px 0 0px;
+}
+
+.donation-info img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.boxx {
+    padding: 25px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.boxx img {
+    width: 50%;
+}
+
+.donation-info h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.donation-info p {
+    font-size: 1em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.donation-form {
+    border-top: red 10px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin: auto;
+    max-width: 80%;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.donation-form  form{
+    border-top: red 10px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin: auto;
+    /* max-width: 80%; */
+    border-radius: 0px 0px 10px 10px;
+}
+
+.donation-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.donation-form h3 img {
+    text-align: center;
+    margin-bottom: -8px;
+}
+
+.donation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.donation-form select, .donation-form {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+.donation-form select{
+    border: 1px solid #ccc;
+}
+
+.donation-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.donation-form button:hover {
+    background-color: #0056b3;
+}
+
+#donationForm-1 {
+    text-align: center;
+}
+
+#dedicate {
+    display: flex;
+    flex-direction: row;
+}
+
+#dedicate {
+    display: none;
+    margin: 10px 0;
+}
+
+/* Basic styling for the dropdown */
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Remove default arrow in some browsers */
+}
+
+/* Style for the options */
+.dropdown option {
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Highlight the selected option */
+.dropdown select:focus option:checked {
+    background-color: #cce7ff; /* Light blue background */
+}
+
+/* Style for custom amount input */
+#customAmount {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Container to hold the label and dropdown */
+.dropdown-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+}
+
+/* Styling the label */
+.dropdown-container label {
+    display: block;
+    font-size: 14px;
+    justify-content: stretch;
+    text-align: center;
+    margin-bottom: 4px;
+    color: #555;
+    
+}
+
+#dedicate {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+#org-name {
+    display: none;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+/* Basic styling for the dropdown */
+.dropdown-container select {
+    width: 50%;
+    margin-top: -8px;
+    margin-left: 10px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Removes default arrow in some browsers */
+}
+
+/* Styling for the dropdown when focused */
+.dropdown-container select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 3px #007bff;
+}
+
+/* Styling for the dropdown options */
+.dropdown-container select option {
+    padding: 8px;
+}
+
+#final {
+    margin-top: 150px;
+    max-width: 60%;
+}
+
+/* #donationAmount select option{
+    padding: 15px;
+    font-size: 1em;
+    color: red;
+    background-color: #000000;
+    margin: 10px 0;
+    line-height: 1.5;
+} */
+
+#donationAmount {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+}
